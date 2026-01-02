@@ -31,9 +31,9 @@ func NewChatModel(cfg *Config) *ChatModel {
 
 func (m *ChatModel) Invoke(messages []Message, tools []map[string]interface{}) (string, []ToolCall, error) {
 	reqBody := map[string]interface{}{
-		"model": m.model,
-		"data":  messages,
-		"tools": tools,
+		"model":       m.model,       // 模型名称
+		"messages":    messages,      // 对话消息（注意：是 "messages" 不是 "data"）
+		"temperature": m.temperature, // 温度参数
 	}
 	if len(tools) > 0 {
 		reqBody["tools"] = tools

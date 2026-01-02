@@ -1,4 +1,7 @@
-base_url: "xxx"
-token: "your_token_here"
-model_name: "xxx"
+
+base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+token: "sk-xxx"  
+model_name: "qwen-flash"  # 可选: qwen-turbo, qwen-plus, qwen-max, qwen-long
+
+
 temperature: 0
